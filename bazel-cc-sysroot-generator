@@ -221,6 +221,7 @@ def _cleanup_linux_sysroot(
         os.chdir(sysroot_dir.absolute())
         _remove_matching_patterns(Path("."), deleted_patterns)
         _fix_package_symlinks(broken_libraries_dir, destination_dir)
+        Path("lib").symlink_to(Path("usr") / "lib")
         _fix_package_symlinks(Path("lib64"), destination_dir)
 
     _validate_relative_symlinks(sysroot_dir)
