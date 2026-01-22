@@ -50,8 +50,8 @@ packages = [
   "libssl-dev",
   "libssl3t64",
   "openssl",
-
-  "libgtk-3-dev",
+  "libgcc-14-dev",
+  "libgcc-s1",
 ]
 deleted_patterns = [
   "*.pc",
